@@ -8,6 +8,17 @@ function findMin($arr) {
     }
     return $min;
  }
+
+ function findMax($arr) {
+    $max = $arr[0];
+    for ($i = 1; $i < count($arr); ++$i) {
+       if ($arr[$i] > $max) {
+          $max = $arr[$i];
+       }
+    }
+    return $max;
+ }
+
 echo "<pre>";
  $nums = [];
 for($i = 0; $i < 100; ++$i){
@@ -20,3 +31,6 @@ foreach($nums as $num) {
 $minValue = findMin($nums);
 echo "</br>";
 echo "The mininum value is: " . $minValue;
+$maxValue = findMax($nums);
+echo "<br/>";
+echo "The maximum value is: " . $maxValue;
